@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXProgressBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<HBox alignment="BOTTOM_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <VBox fx:id="messageVBox" styleClass="message, other-message">
+        <Label fx:id="userLabel" styleClass="text-caption, text-wrap" text="Max" textOverrun="LEADING_WORD_ELLIPSIS"/>
+        <HBox alignment="BOTTOM_LEFT">
+            <Label fx:id="messageLabel" styleClass="text-body, text-wrap" text="Other Message" textOverrun="LEADING_WORD_ELLIPSIS"/>
+            <Label fx:id="timestamp" styleClass="timestamp" text="20:21"/>
+        </HBox>
+        <MFXProgressBar fx:id="progressBar" maxWidth="1.7976931348623157E308"/>
+        <HBox styleClass="pad-top-xs">
+            <Label fx:id="progressLabel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="0% (0 / 0 MB)" HBox.hgrow="ALWAYS"/>
+            <FontIcon fx:id="actionIcon" iconLiteral="fltfal-arrow-download-24" styleClass="icon-md, icon-primary"/>
+        </HBox>
+    </VBox>
+</HBox>

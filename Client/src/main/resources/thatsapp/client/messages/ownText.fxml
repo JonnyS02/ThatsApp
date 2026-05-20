@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+
+<HBox alignment="BOTTOM_RIGHT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@../style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <HBox alignment="BOTTOM_LEFT" styleClass="message, own-message">
+        <Label fx:id="messageLabel" styleClass="text-body, text-wrap" text="Own Message" textOverrun="LEADING_WORD_ELLIPSIS"/>
+        <Label fx:id="timestamp" styleClass="timestamp" text="20:21"/>
+    </HBox>
+</HBox>

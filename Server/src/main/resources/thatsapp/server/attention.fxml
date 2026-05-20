@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox prefHeight="320.0" prefWidth="310.0" styleClass="dialog-root, pad-base" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thatsapp.server.ui.controllers.AttentionController">
+    <Label styleClass="text-title, text-title-attention" text="Attention"/>
+    <Separator styleClass="modal-separator"/>
+    <FontIcon iconLiteral="fltfmz-warning-24" styleClass="icon-warning, icon-xl"/>
+    <Label fx:id="messageLabel" styleClass="text-body, text-error" text="Message"/>
+    <Separator styleClass="modal-separator"/>
+    <MFXButton buttonType="RAISED" depthLevel="LEVEL1" onAction="#close" prefWidth="160.0" styleClass="button-primary, button-spacious" text="OK"/>
+</VBox>

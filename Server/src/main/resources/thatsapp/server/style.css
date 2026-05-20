@@ -1,0 +1,178 @@
+* {
+    -custom-blue: #3290ff;
+    -custom-error: #ca0000;
+}
+
+.text-body {
+    -fx-font-size: 15px;
+}
+
+.text-compact {
+    -fx-font-size: 10px;
+}
+
+.text-error {
+    -fx-text-fill: -custom-error;
+    -fx-font-family: "Bahnschrift";
+}
+
+.text-icon-only {
+    -fx-font-size: 1px;
+}
+
+.text-semi-compact {
+    -fx-font-size: 12px;
+}
+
+.text-title {
+    -fx-font-weight: bold;
+    -fx-font-family: "Bahnschrift SemiBold";
+    -fx-font-size: 21px;
+    -fx-padding: 4px 14px 6px 14px;
+    -fx-background-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-radius: 10px;
+}
+
+.text-title-standard {
+    -fx-text-fill: -custom-blue;
+    -fx-background-color: rgba(152, 226, 255, 0.48);
+    -fx-border-color: rgba(50, 144, 255, 0.35);
+    -fx-effect: dropshadow(gaussian, rgba(50, 144, 255, 0.18), 10, 0.2, 0, 2);
+}
+
+.text-title-attention {
+    -fx-text-fill: -custom-error;
+    -fx-background-color: rgba(255, 162, 147, 0.48);
+    -fx-border-color: rgba(202, 0, 0, 0.35);
+    -fx-effect: dropshadow(gaussian, rgba(202, 0, 0, 0.16), 10, 0.2, 0, 2);
+}
+
+.dialog-root {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+.modal-separator {
+    -fx-padding: 4px 0 4px 0;
+    -fx-opacity: 0.7;
+}
+
+.pad-base {
+    -fx-padding: 10px;
+}
+
+.pad-header {
+    -fx-padding: 7px 10px;
+}
+
+.pad-left-sm {
+    -fx-padding: 0 0 0 5px;
+}
+
+.border-light,
+.button-neutral,
+.message-input,
+.message-pane {
+    -fx-border-color: #ccc;
+}
+
+.border-light {
+    -fx-border-width: 1px;
+}
+
+.button-danger {
+    -fx-background-color: #ffa293;
+}
+
+.button-neutral {
+    -fx-background-color: #eee;
+    -fx-border-width: 1px;
+}
+
+.button-primary {
+    -fx-background-color: #98e2ff;
+}
+
+.button-success {
+    -fx-background-color: #97ff99;
+}
+
+.icon-lg {
+    -fx-icon-size: 23px;
+}
+
+.icon-xl {
+    -fx-icon-size: 96px;
+}
+
+.icon-primary {
+    -fx-icon-color: -custom-blue;
+}
+
+.icon-subtle {
+    -fx-icon-color: #666;
+}
+
+.icon-warning {
+    -fx-icon-color: #ff9800;
+}
+
+.message-input {
+    -fx-border-radius: 0;
+    -fx-font-size: 15px;
+}
+
+.message-pane {
+    -fx-background-color: #CBECF7;
+    -fx-font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", "Segoe UI", "Arial";
+}
+
+.mfx-button,
+.mfx-text-field .floating-text,
+.mfx-password-field .floating-text {
+    -fx-font-family: "Bahnschrift";
+}
+
+.mfx-button.button-spacious,
+.mfx-button.button-spacious:hover,
+.mfx-button.button-spacious:armed,
+.mfx-button.button-spacious:focused {
+    -fx-padding: 8px 16px;
+    -fx-font-size: 15px;
+}
+
+.mfx-button.button-spacious,
+.mfx-button.button-spacious:hover,
+.mfx-button.button-spacious:armed,
+.mfx-button.button-spacious:focused,
+.mfx-button.button-rounded,
+.mfx-button.button-rounded:hover,
+.mfx-button.button-rounded:armed,
+.mfx-button.button-rounded:focused {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.mfx-button.button-spacious .mfx-ripple-generator,
+.mfx-button.button-rounded .mfx-ripple-generator {
+    -mfx-auto-clip: true;
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+}
+
+.mfx-text-field.rounded-input,
+.mfx-password-field.rounded-input {
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-font-size: 15px;
+}
+
+.mfx-text-field .floating-text,
+.mfx-password-field .floating-text {
+    -fx-font-size: 16px;
+}
+
+.mfx-text-field {
+    -mfx-main: -custom-blue;
+}

@@ -1,0 +1,111 @@
+:root {
+  font-family: "Segoe UI Variable", "Bahnschrift", "Segoe UI", sans-serif;
+  color: #0f172a;
+  background-color: #f6f9fc;
+  line-height: 1.5;
+  scroll-behavior: smooth;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --brand-blue: #3290ff;
+  --brand-lighter-blue: #cbecf7;
+  --brand-rose: #d4b3ff;
+  --brand-green: #97ff99;
+  --brand-light-grey: #cccccc;
+  --brand-white: #ffffff;
+  --bs-body-font-family: "Segoe UI Variable", "Bahnschrift", "Segoe UI",
+    sans-serif;
+  --bs-body-color: #0f172a;
+  --bs-body-bg: #f6f9fc;
+  --bs-border-color: var(--brand-light-grey);
+  --bs-primary: var(--brand-blue);
+  --bs-primary-rgb: 50, 144, 255;
+}
+
+.stats-container {
+  max-width: 72rem;
+}
+
+.icon-square {
+  width: 44px;
+  height: 44px;
+}
+
+.stats-brand-icon {
+  height: 45px;
+  width: 45px;
+}
+
+.icon-bg-lighter {
+  background: var(--brand-lighter-blue);
+  color: var(--brand-blue);
+}
+
+.icon-bg-green {
+  background: var(--brand-green);
+  color: #0f172a;
+}
+
+.icon-bg-rose {
+  background: var(--brand-rose);
+  color: #0f172a;
+}
+
+.tracking-compact {
+  letter-spacing: 0.1em;
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    var(--brand-white) 0%,
+    #f5f9ff 45%,
+    var(--brand-lighter-blue) 100%
+  );
+}
+
+::selection {
+  background-color: rgba(152, 226, 255, 0.7);
+  color: #0f172a;
+}
+
+.stats-orb {
+  filter: blur(60px);
+}
+
+.stats-orb--left {
+  width: 340px;
+  height: 340px;
+  left: 50%;
+  top: -120px;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    circle at center,
+    rgba(152, 226, 255, 0.5),
+    transparent 70%
+  );
+}
+
+.stats-orb--right {
+  width: 240px;
+  height: 240px;
+  right: 0;
+  top: 40px;
+  background: radial-gradient(
+    circle at center,
+    rgba(50, 144, 255, 0.2),
+    transparent 70%
+  );
+}
+
+@media (max-width: 768px) {
+  .stats-orb--left {
+    width: 260px;
+    height: 260px;
+  }
+  .stats-orb--right {
+    width: 180px;
+    height: 180px;
+  }
+}

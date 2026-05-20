@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import io.github.palexdev.materialfx.controls.MFXButton?>
+<?import io.github.palexdev.materialfx.controls.MFXPasswordField?>
+<?import io.github.palexdev.materialfx.controls.MFXScrollPane?>
+<?import io.github.palexdev.materialfx.controls.MFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import org.kordamp.ikonli.javafx.FontIcon?>
+
+<VBox prefHeight="400.0" prefWidth="849.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="thatsapp.server.ui.controllers.MainController">
+    <HBox alignment="CENTER" spacing="10.0" styleClass="pad-base">
+        <MFXTextField fx:id="externalIpField" editable="false" floatingText="External IP" maxWidth="1.7976931348623157E308" styleClass="rounded-input" HBox.hgrow="ALWAYS"/>
+        <MFXTextField fx:id="internalIpField" editable="false" floatingText="Internal IP" maxWidth="1.7976931348623157E308" styleClass="rounded-input" HBox.hgrow="ALWAYS"/>
+        <MFXTextField fx:id="portField" floatingText="Port" promptText="Enter a port" styleClass="rounded-input" textLimit="5"/>
+        <MFXPasswordField fx:id="accessKeyField" allowCopy="true" allowCut="true" allowPaste="true" floatingText="Access Key" maxWidth="1.7976931348623157E308" styleClass="rounded-input" HBox.hgrow="ALWAYS"/>
+        <MFXButton fx:id="startButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#toggleStart" styleClass="button-spacious, button-success" text="Start"/>
+        <MFXButton buttonType="RAISED" depthLevel="LEVEL1" onAction="#shutdown" styleClass="button-danger, button-spacious" text="Shutdown"/>
+      <MFXButton fx:id="settingsButton" buttonType="RAISED" depthLevel="LEVEL1" onAction="#changeSettings" styleClass="button-rounded" text="">
+          <graphic>
+              <FontIcon iconLiteral="fltfmz-settings-28" styleClass="icon-lg, icon-primary" />
+          </graphic>
+      </MFXButton>
+    </HBox>
+    <VBox VBox.vgrow="ALWAYS">
+        <HBox prefHeight="26.0" spacing="10.0" styleClass="border-light, pad-header">
+            <FontIcon fx:id="connectionStatusIcon" iconLiteral="fltral-chat-off-24" styleClass="icon-lg, icon-subtle"/>
+            <Label fx:id="userCounterLabel" maxWidth="1.7976931348623157E308" prefHeight="40.0" styleClass="text-semi-compact" text="Offline" />
+            <Separator fx:id="statusHBoxSeparator" orientation="VERTICAL" prefHeight="200.0" visible="false"/>
+            <Label fx:id="userListLabel" maxWidth="1.7976931348623157E308" prefHeight="40.0" styleClass="text-semi-compact" text="No users connected." HBox.hgrow="ALWAYS" visible="false"/>
+            <MFXButton buttonType="RAISED" depthLevel="LEVEL1" onAction="#clearMessages" styleClass="button-primary, pad-left-sm, text-icon-only" text=" ">
+                <graphic>
+                    <FontIcon iconLiteral="fltral-delete-24" styleClass="icon-lg, icon-subtle"/>
+                </graphic>
+            </MFXButton>
+        </HBox>
+        <MFXScrollPane id="test" fx:id="scrollPane" styleClass="message-pane" VBox.vgrow="ALWAYS">
+            <VBox fx:id="messageVBox" styleClass="pad-base"/>
+        </MFXScrollPane>
+        <HBox>
+            <MFXTextField fx:id="messageInput" borderGap="0.0" disable="true" floatMode="DISABLED" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" promptText="Write Message" styleClass="message-input" textLimit="500" HBox.hgrow="ALWAYS"/>
+            <MFXButton fx:id="sendButton" disable="true" maxHeight="1.7976931348623157E308" onAction="#sendMessage" styleClass="button-neutral, text-compact" text=" ">
+                <graphic>
+                    <FontIcon iconLiteral="fltfmz-send-28" styleClass="icon-lg, icon-primary"/>
+                </graphic>
+            </MFXButton>
+        </HBox>
+    </VBox>
+</VBox>
