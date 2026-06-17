@@ -1,0 +1,17 @@
+Options -Indexes
+ServerSignature Off
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Only public assets and app routes may leave the repository root.
+    RewriteRule ^(favicon\.ico|icon\.ico|robots\.txt|style\.css)$ public/$1 [L]
+    RewriteRule ^(?:$|index\.php(?:/.*)?|stats(?:/.*)?|api(?:/.*)?)$ index.php [L,QSA]
+
+    # Everything else stays private.
+    RewriteRule ^ - [F,L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
